@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perfect numbers</title>
+</head>
+<body>
+    <script>
+        let lowerLimit = parseInt(prompt("Enter the lower limit of the range:"));
+        let upperLimit = parseInt(prompt("Enter the upper limit of the range:"));
+        let perfectNumbers = [];
+
+        for (let num = lowerLimit; num <= upperLimit; num++) {
+            let sumOfDivisors = 0;
+
+            for (let i = 1; i <= num / 2; i++) {
+                if (num % i === 0) {
+                    sumOfDivisors += i;
+                }
+            }
+
+            if (sumOfDivisors === num && num !== 0) {
+                perfectNumbers.push(num);
+            }
+        }
+
+        if (perfectNumbers.length > 0) {
+            alert("Perfect numbers between " + lowerLimit + " and " + upperLimit + " are: " + perfectNumbers.join(", ") + ".");
+        } else {
+            alert("There are no perfect numbers between " + lowerLimit + " and " + upperLimit + ".");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple User Registration</title>
+  <script>
+    // Function to run when page loads
+    window.onload = function() {
+      // Step 1: Greeting alert
+      alert("Welcome to the User Registration Page!");
+
+      // Step 2: Ask user to enter their name
+      let userName = prompt("Please enter your name:");
+
+      // If user pressed Cancel or left it blank
+      if (userName === null || userName.trim() === "") {
+        alert("No name entered. Registration cannot continue.");
+        return; // stop further execution
+      }
+
+      // Step 3: Ask confirmation
+      let confirmSubmit = confirm("Do you want to submit your registration, " + userName + "?");
+
+      // Step 4: If user confirms
+      if (confirmSubmit) {
+        alert("Thank you, " + userName + "! Your registration has been successfully submitted.");
+      } 
+      // Step 5: If user cancels
+      else {
+        alert("Registration has been canceled.");
+      }
+
+
+      
+
+
+    };
+  </script>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+  <h2>Simple User Registration</h2>
+  <p>This page simulates a registration process using JavaScript dialog boxes.</p>
+</body>
+</html>

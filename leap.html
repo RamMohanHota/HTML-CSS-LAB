@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Days in Month</title>
+</head>
+<body>
+  <h2>Find Number of Days in a Month</h2>
+  <input type="text" id="month" placeholder="Enter month name">
+  <button onclick="showDays()">Show Days</button>
+  <p id="output"></p>
+
+  <script>
+    function showDays() {
+      let month = document.getElementById("month").value.toLowerCase();
+      let days;
+
+      switch (month) {
+        case "january":
+        case "march":
+        case "may":
+        case "july":
+        case "august":
+        case "october":
+        case "december":
+          days = "31 days";
+          break;
+
+        case "april":
+        case "june":
+        case "september":
+        case "november":
+          days = "30 days";
+          break;
+
+        case "february":
+          days = "28 or 29 days (depending on leap year)";
+          break;
+
+        default:
+          days = "Invalid month name!";
+      }
+
+      document.getElementById("output").innerText = days;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    text-transform: uppercase;
+}
+a{
+    margin: 20px;
+    text-decoration: none;
+    color: rgba(6, 3, 49, 0.73);
+    
+}
+a:visited{
+    color:purple
+}
+a:active{
+    color: red;
+}
+a:hover{
+    text-decoration: underline;
+    color: orange;
+}
+.logo{
+    width: 35%;
+    position: relative;
+    left: 60px;
+}
+.lower{
+    margin-top: 20px;
+    color: rgba(37, 37, 124, 0.46);
+}
+.rightnav{
+    margin-top: 10px;
+}
+.body{
+    display: flex;
+}
+.bodyleft{
+    height: 85vh;
+    width: 50vw;
+    font-size: 170%;
+   
+    /* position: absolute; */
+}
+.btn{
+    background-color: blue;
+    width: 200px;
+    height: 50px;
+    color: white;
+    margin-left: 75px;
+}
+h1,p{
+    margin-left: 70px;
+}
+.bodyright{
+    height: 85vh;
+    width: 50vw;
+    justify-content: center;
+
+}
+.extra{
+    width:200px;
+    position: absolute;
+    left: 35%;
+    margin-top: 0;
+    background-color: white;
+    display: none;
+    border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+    
+}
+.imgg{
+    width: 100%;
+}
+.lines{
+    width: 100%;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration - TechConnect</title>
+
+  <!-- link to the same external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* document-wide styles for the registration page */
+    body { margin:0; font-family: Arial, sans-serif; background:#f7fbff; color:#102a43; }
+    .reg-wrap { max-width:820px; margin:28px auto; padding:20px; }
+    form.reg-form { background:#fff; border:1px solid #e6eef8; padding:22px; border-radius:10px; box-shadow:0 4px 18px rgba(2,6,23,0.06); }
+    .form-row { display:flex; gap:16px; margin-bottom:12px; }
+    .col { flex:1; display:flex; flex-direction:column; }
+    label { font-weight:600; margin-bottom:6px; font-size:0.95rem; }
+    input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="file"], textarea, select {
+      padding:10px 12px; border:1px solid #dbe6fb; border-radius:6px; font-size:0.95rem;
+    }
+    textarea { min-height:90px; resize:vertical; }
+    .checkbox-group { display:flex; gap:12px; flex-wrap:wrap; }
+    .actions { display:flex; gap:12px; margin-top:14px; }
+    /* inline example button style will be applied in body below */
+    @media (max-width:760px) {
+      .form-row { flex-direction:column; }
+    }
+  </style>
+</head>
+
+<script>
+document.querySelector('.reg-form').addEventListener('submit', function(e) {
+  let valid = true;
+  
+  // Name: only capitals
+  const nameInput = document.getElementById('name');
+  const nameVal = nameInput.value.trim();
+  if (!/^[A-Z\s]+$/.test(nameVal)) {
+    alert('Name should be in capital letters only.');
+    valid = false;
+  }
+  
+  // Password: at least one uppercase, one lowercase, one special char
+  const passwordInput = document.getElementById('password');
+  const passwordVal = passwordInput.value;
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).+$/;
+  if (!passwordRegex.test(passwordVal)) {
+    alert('Password must contain at least one uppercase letter, one lowercase letter, and one special character.');
+    valid = false;
+  }
+  
+  // Email: must contain "@gmail"
+  const emailInput = document.getElementById('email');
+  const emailVal = emailInput.value;
+  if (!/@gmail\.com$/i.test(emailVal)) {
+    alert('Email must be a valid Gmail address ending with "@gmail.com".');
+    valid = false;
+  }
+  
+  // Stop form submission if any validation fails
+  if (!valid) {
+    e.preventDefault();
+  }
+});
+</script>
+
+
+
+<body>
+  <div class="reg-wrap">
+    <h2 style="color:#c2410c;">Student Registration</h2> <!-- inline color -->
+    <form class="reg-form" novalidate>
+      <!-- Name and ID -->
+      <div class="form-row">
+        <div class="col">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Full name">
+        </div>
+        <div class="col">
+          <label for="studid">ID</label>
+          <input id="studid" name="studid" type="text" placeholder="Student ID">
+        </div>
+      </div>
+
+      <!-- Password and Email -->
+      <div class="form-row">
+        <div class="col">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Password">
+        </div>
+        <div class="col">
+          <label for="email">E-Mail ID</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com">
+        </div>
+      </div>
+
+      <!-- Age and Gender -->
+      <div class="form-row">
+        <div class="col">
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="10" max="100" placeholder="Age">
+        </div>
+        <div class="col">
+          <label>Gender</label>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- College Address -->
+      <div style="margin-bottom:12px;">
+        <label for="address">College Address</label>
+        <textarea id="address" name="address" placeholder="College address"></textarea>
+      </div>
+
+      <!-- Branch and Technical Skills -->
+      <div class="form-row">
+        <div class="col">
+          <label for="branch">Branch</label>
+          <select id="branch" name="branch">
+            <option value="">Select branch</option>
+            <option value="CSE">CSE</option>
+            <option value="CST">CST</option>
+            <option value="CEN">CEN</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>Technical Skills</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="skills" value="C"> C</label>
+            <label><input type="checkbox" name="skills" value="Java"> Java</label>
+            <label><input type="checkbox" name="skills" value="Python"> Python</label>
+            <label><input type="checkbox" name="skills" value="JSP"> JSP</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume and Photo Upload -->
+      <div class="form-row">
+        <div class="col">
+          <label for="resume">Resume Upload</label>
+          <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx">
+        </div>
+        <div class="col">
+          <label for="photo">Photo Upload</label>
+          <input id="photo" name="photo" type="file" accept="image/*">
+        </div>
+      </div>
+
+      <!-- Comments label + textarea (optional) -->
+      <div style="margin-top:10px;">
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments" placeholder="Any notes or comments"></textarea>
+      </div>
+
+      <!-- Submit & Reset (no action or method added per instructions) -->
+      <div class="actions">
+        <button type="submit" class="btn" style="background:#007bff; color:#fff; border:none; padding:10px 14px; border-radius:6px;">Submit</button>
+        <button type="reset" style="background:#fff; border:1px solid #cbd5e1; padding:10px 14px; border-radius:6px;">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

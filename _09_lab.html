@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button[type="submit"]{
+            background-color: #007bff; /* blue */
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover{
+            background-color: #0056b3; /* darker on hover */
+        }
+    </style>
+</head>
+<body>
+    <form target="_blank">
+        <fieldset>
+            <legend><h2>STUDENT REGISTRATION FORM</h2></legend>
+    <label for="firstname">FIRSTNAME:</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Enter your firstname"><br>
+
+    <br><br>
+
+    <label for="lastname">LASTNAME:</label>
+    <input type="text" id="lastname" name="" placeholder="Enter your lastname"><br>
+
+    <br><br>
+
+     <label for="father">FATHER'S NAME:</label>
+    <input type="text" id="father" name="fathers name" placeholder="Enter your fathers name"><br>
+
+    <br><br>
+
+     <label for="mother">MOTHERS'S NAME:</label>
+    <input type="text" id="mother" name="mothers name" placeholder="Enter your mother's name"><br>
+
+    <br><br>
+
+    <label for="dob">DATE OF BIRTH:</label>
+    <input type="date" id="dob" name="date of birth" placeholder="Enter your date of birth"><br>
+
+    <br><br>
+
+    <label for="age">AGE:</label>
+    <input type="number" id="age" name="age" placeholder="Enter your AGE"><br>
+
+    <br><br>
+
+    <label for="E">EMAIL:</label>
+    <input type="email" id="E" name="EMAIL" placeholder="Enter your email@gmail.com"><br>
+
+    <br><br>
+
+    <label for="phone">CONTACT NO.:</label>
+    <input type="tel" id="phone" name="CONTACT NO" placeholder="Enter your phone no."><br>
+
+    <br><br>
+
+
+    <label>GENDER:</label>
+    <label for="gender-male" style="margin-left:10px;">
+        <input type="radio" id="gender-male" name="gender" value="male"> Male
+    </label>
+    <label for="gender-female" style="margin-left:10px;">
+        <input type="radio" id="gender-female" name="gender" value="female"> Female
+    </label>
+    <br><br>
+
+    <fieldset>
+
+    <label for="IN">INSTITUTE NAME:</label>
+    <input type="text" id="IN" name="INSTITUTE NAME" placeholder="Enter your INSTITUTE NAME"><br>
+
+    <br><br>
+
+     <label for="wb">WEBSITE:</label>
+    <input type="url" id="wb" name="WEBSITE" placeholder="INSTITUTE WEBSITE.com"><br>
+
+    <br><br>
+
+    <label for="favourite color">Favourite Color:</label>
+        <input type="color" id="favourite color" name="favourite color" target="_blank" placeholder="Enter your favourite color"><br><br>
+
+    <br><br>
+
+    <label for="password">PASSWORD:</label>
+    <input type="password" id="password" name="PASSWORD" placeholder="Enter your PASSWORD *****"><br>
+
+    <br><br>
+
+     <label for="branch">BRANCH:</label>
+    <select id="branch" name="branch" required>
+        <option value="" disabled selected>Select branch</option>
+        <option value="CSE">CSE</option>
+        <option value="CST">CST</option>
+        <option value="CEN">CEN</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+    </select>
+    <br><br>
+
+    <label for="country">COUNTRY:</label>
+    <input list="countries" id="country" name="country" placeholder="Select or type country">
+    <datalist id="countries">
+        <option value="Australia">
+        <option value="Egypt">
+        <option value="Thailand">
+        <option value="India">
+    </datalist>
+
+    <br><br>
+
+
+    <button type="submit">Submit</button>
+    
+    <form>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+5.<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of digits of given number</title>
+</head>
+<body>
+    <script>
+        let number = prompt("Enter a number to calculate the sum of its digits:");
+        let sum = 0;
+
+        for (let digit of number) {
+            if (!isNaN(digit)) { // Check if the character is a digit
+                sum += parseInt(digit);
+            }
+        }
+
+        alert("The sum of the digits in the number " + number + " is " + sum + ".");
+    </script>
+    
+</body>
+</html>

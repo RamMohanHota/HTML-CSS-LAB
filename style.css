@@ -1,0 +1,88 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 18px;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  background: #1976d2;
+  box-shadow: 0 8px 24px rgba(92, 226, 9, 0.16);
+  color: #fff;
+}
+
+.card:hover h2,
+.card:hover p,
+.card:hover .price {
+  color: #fff;
+}
+
+.card-img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin: 10px 0 8px 0;
+  color: #222;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.price {
+  font-size: 1.1rem;
+  color: #1976d2;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #c01515;
+}

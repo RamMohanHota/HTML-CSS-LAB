@@ -1,0 +1,25 @@
+/* external stylesheet - most styles placed here */
+
+/* Element selector example */
+h1, h2, h3, h4 { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+/* Class selector example */
+.btn {
+  background:#1f6feb;
+  color:#fff;
+  padding:8px 12px;
+  border-radius:6px;
+  border:none;
+  cursor:pointer;
+}
+.btn:hover { background:#0b5ed7; }
+
+/* ID selector example */
+#services { margin-top:20px; }
+
+/* layout helpers */
+.card { box-sizing:border-box; }
+
+/* links */
+a { color:#0b5ed7; text-decoration:none; }
+a:hover { text-decoration:underline; }
